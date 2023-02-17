@@ -13,7 +13,17 @@ class Magazine
         @@magazines
     end
 
-    
+    def magazine_contributors
+        Article.all.select {|article| article.magazine == @name}    
+    end
+
+    def contributors 
+        contributors = []
+
+        magazine_contributors.map {|article| article.author}.uniq
+    end
+
+
 
 
 end
