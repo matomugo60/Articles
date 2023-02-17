@@ -23,6 +23,11 @@ class Magazine
         magazine_contributors.map {|article| article.author}.uniq
     end
 
+    def self.find_by_name(name)
+        @@magazines.find(name) {|magazine| magazine [:name] == name}
+    end
+
+
     def articles_titles
         articles_titles = []
 
