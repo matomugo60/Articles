@@ -23,6 +23,28 @@ class Magazine
         magazine_contributors.map {|article| article.author}.uniq
     end
 
+    def articles_titles
+        articles_titles = []
+
+        Article.all.map {|article| 
+        if article.magazine == self.name
+        article_titles << article.title
+        end}
+
+        article_titles
+    end
+
+    def contributing_authors
+        contributions = []
+        authors = []
+
+        magazine_contributors.select {|author| authors << author.author}
+
+        authors.tally.select {|author, value| value > 2 && contributions << author}
+
+        contributions
+    end
+
 
 
 
