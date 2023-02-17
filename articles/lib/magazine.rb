@@ -9,5 +9,11 @@ class Magazine
 
     end
 
+    def self.all
+        @@magazines
+    end
+
+    
+
 
 end
