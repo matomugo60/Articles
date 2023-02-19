@@ -4,17 +4,17 @@ require_relative './lib/article'
 require_relative './lib/author'
 require_relative './lib/magazine'
 
-
+# new authors
 author_1 = Author.new("Sarah Abraham")
 author_2 = Author.new("Michael Jordan")
 author_3 = Author.new("Patricia Young")
 
-
+# new magazines
 magazine_1 = Magazine.new("Life in Crime", "The Sequel")
 magazine_2 = Magazine.new("Basketball", "The Good Shoes")
 magazine_3 = Magazine.new("Cooking Made Easy", "Cereals")
 
-
+# new articles
 article_1 = Article.new(author_3, magazine_1.name, "Menu")
 article_2 = Article.new(author_3, magazine_1.name, "Secret Recipe")
 article_3 = Article.new(author_2, magazine_1.name, "Energy  Drinks")
@@ -40,4 +40,4 @@ puts Magazine.find_by_name(magazine_1.name)
 
 # Uncomment binding.pry to test individual data
 
-# binding.pry
+ binding.pry
