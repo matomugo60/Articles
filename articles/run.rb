@@ -36,6 +36,33 @@ puts "All Articles: #{Article.all.inspect}"
 # Print information looked for
 puts Magazine.find_by_name(magazine_1.name)
 
+# Inserting new data
+puts "Insert new data"
+
+# New Author
+puts "New Author"
+authorname = gets.chomp
+author_new = Author.new(authorname)
+
+# New Magazine
+puts "New Magazine"
+newmagazine = gets.chomp
+
+# New Magazine Category
+puts "New Magazine Category"
+newcategory = gets.chomp
+
+# New Magazine and Category
+magazine_new = Magazine.new(newmagazine, newcategory)
+
+# New Article
+puts "New Article"
+article_new = gets.chomp
+
+# New Article that returns new Author and new Magazine
+new_article = Article.new(author_new, magazine_new, article_new)
+
+
 
 # Uncomment binding.pry to test individual data
 
