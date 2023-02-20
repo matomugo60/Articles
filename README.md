@@ -1,5 +1,12 @@
 # Articles - Without AR
 
+
+![articles](https://user-images.githubusercontent.com/117737586/220095352-6f936a3e-57ce-41fa-8140-50cfeaa4b6e1.png)
+
+
+
+
+
 # Description 
 
 For this assignment, you will be working with a Magazine domain.
