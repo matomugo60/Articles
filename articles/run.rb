@@ -33,7 +33,8 @@ puts "All Articles: #{Article.all.inspect}"
 
 
 # Inserting new data
-puts "Insert new data"
+puts "MAGAZINE APP!"
+puts "INSERT NEW DATA"
 
 # New Author
 puts "New Author :"
