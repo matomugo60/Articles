@@ -9,6 +9,20 @@ class Article
 
         @@all << self
     end
+    
+    def title 
+        @title
+    end
+
+    def author 
+        @author
+    end
+
+    def magazine 
+        @magazine
+    end
+
+    
 
     def self.all
         @@all

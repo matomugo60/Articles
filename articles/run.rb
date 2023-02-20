@@ -32,38 +32,68 @@ puts "All Magazines: #{Magazine.all.inspect}"
 puts "All Articles: #{Article.all.inspect}"
 
 
-
-# Print information looked for
-puts Magazine.find_by_name(magazine_1.name)
-
 # Inserting new data
 puts "Insert new data"
 
 # New Author
-puts "New Author"
+puts "New Author :"
 authorname = gets.chomp
 author_new = Author.new(authorname)
 
 # New Magazine
-puts "New Magazine"
+puts "New Magazine :"
 newmagazine = gets.chomp
 
 # New Magazine Category
-puts "New Magazine Category"
+puts "New Magazine Category :"
 newcategory = gets.chomp
 
 # New Magazine and Category
 magazine_new = Magazine.new(newmagazine, newcategory)
 
 # New Article
-puts "New Article"
+puts "New Article :"
 article_new = gets.chomp
 
 # New Article that returns new Author and new Magazine
 new_article = Article.new(author_new, magazine_new, article_new)
 
+# List of all Authors
+puts "Type (Authors) to view all authors"
+
+user = gets.chomp
+
+if user == "Authors"
+    Author.all.each {|author| 
+puts "Name: #{author.name}"
+}
+end
+
+# List of all Magazines
+puts "Type (Magazines) to view all magazines"
+
+user = gets.chomp
+
+if user == "Magazines"
+    Magazine.all.each {|magazine| 
+puts "Magazine Name : #{magazine.name}"
+}
+end
+
+# List of all Articles 
+puts "Type (Articles) to view all articles"
+
+user = gets.chomp
+
+if user == "Articles"
+    Article.all.each {|article|
+puts "Article Name : #{article.title}"
+}
+end
+
+
 
 
 # Uncomment binding.pry to test individual data
 
- binding.pry
+ #binding.pry

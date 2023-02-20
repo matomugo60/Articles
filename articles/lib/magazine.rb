@@ -1,16 +1,24 @@
 class Magazine
     attr_accessor :name, :category
-    @@magazines = []
+    @@all = []
 
     def initialize(name, category)
         @name = name
         @category = category
-        @@magazines << {:name => "#{name}", :category => "#{category}"}
+        @@all << self
 
     end
 
+    def name
+        @name
+    end
+
+    def category 
+        @category
+    end
+
     def self.all
-        @@magazines
+        @@all
     end
 
     def magazine_contributors
