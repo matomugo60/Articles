@@ -1,8 +1,7 @@
 require 'pry'
 
-require_relative './lib/article'
-require_relative './lib/author'
-require_relative './lib/magazine'
+require_relative './config/environment'
+
 
 # new authors
 author_1 = Author.new("Sarah Abraham")
