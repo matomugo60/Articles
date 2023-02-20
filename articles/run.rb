@@ -92,6 +92,27 @@ puts "Article Name : #{article.title}"
 }
 end
 
+# List of all Topics
+puts "Type (Topics) to view all titles"
+
+user = gets.chomp
+
+if user == "Topics"
+    Magazine.all.each {|magazine|
+puts "Topic Name: #{magazine.category}"
+}
+end
+
+# Look for magazine by name
+puts "Search for a magazine by using its name"
+user = gets.chomp
+
+Magazine.all.each do |magazine|
+    if magazine.name == user
+        puts "Name : #{magazine.name}"
+    end
+end
+
 
 
 
