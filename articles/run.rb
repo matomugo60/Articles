@@ -114,6 +114,26 @@ Magazine.all.each do |magazine|
 end
 
 
+# Look for contributing authors
+puts "Search for contributing authors by their name"
+user = gets.chomp
+
+Magazine.all.each do  |magazine|
+    if magazine.name == user
+        puts "Magazine Author Name : #{magazine.contributing_authors}"
+    end
+end
+
+# Look for Articles in Magazines
+puts "Search for articles found in different magazines"
+user = gets.chomp
+
+Magazine.all.each do  |magazine|
+    if magazine.name == user
+        puts "Magazine Article Name : #{magazine.article_titles}"
+    end
+end
+
 
 
 # Uncomment binding.pry to test individual data
